@@ -43,7 +43,7 @@ class Node:
                 self._s = FORK_POINT
                 forks = s.find(')', index)
                 subs = s[index + 1:forks+1]
-                print(subs)
+                #print(subs)
                 self._next = [
                     Node(s, forks+1,parent=self),
                     Node(subs, 0,parent=self)
