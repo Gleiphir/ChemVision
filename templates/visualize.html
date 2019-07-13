@@ -1,16 +1,20 @@
 <html>
 <head>
-<title>Ordering notice</title>
+<title>visualize SMILE</title>
 </head>
 <body>
-<h1>Ordering notice</h1>
-<p>
-  inputed SMILE is {{smile}}
+<h1>See your SMILE</h1>
+  inputed SMILE is <br />
 </p>
+<p>
+  <b>{{smile}}</b>
+
+</p>
+
 <img src="{{imgsrc}}" />
 <p>
   <form action="smile" method="POST">
-    <p>Enter your S.M.I.L.E here:<input type="text" name="smart" /></p>
+    <p>Enter your S.M.I.L.E here:<input type="text" name="smile_str" /></p>
   <input type="submit" value="Submit" />
   </form>
 </p>

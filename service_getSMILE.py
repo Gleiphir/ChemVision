@@ -21,13 +21,13 @@ def getSMILE_visualize(imgsrc='images',smile = ''):
     return render_template('visualize.html', imgsrc=imgsrc)
 
 @app.route('/smile', methods=['POST', 'GET'])
-def getSMILE_getSMART(imgsrc='empty_SMILEimage'):
+def getSMILE_getSMART(imgsrc='tmp_image'):
     form = request.form.to_dict()
-    if not 'smile' in form:
-        return render_template('visualize.html', imgsrc=imgsrc)
-    S2P.genPic(form['smile'])
+    if not 'smile_str' in form:
+        return render_template('visualize.html', imgsrc='empty_SMILEimage')
+    S2P.genPic(form['smile_str'])
 
-    return render_template('visualize.html', imgsrc=imgsrc)
+    return render_template('visualize.html', imgsrc=imgsrc,smile=form['smile_str'])
 
 @app.route('/empty_SMILEimage')
 def getSMILE_emptypic():
