@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Search Result</title>
+</head>
+<body>
+<h1>Search Result</h1>
+<p>
+  inputed Pattern is
+</p>
+<h2> {{pattern}}</h2>
+<h3>matching results are shown below</h3>
+<div>
+  <ul>
+  {% for value in results %}
+
+
+    <li>
+       <p>{{ value }}</p>
+    </li>
+
+  {% endfor %}
+  </ul>
+</div>
+<p>
+  <a href="search">return to search page</a>
+</p>
+</body>
+</html>
