@@ -13,4 +13,4 @@ def search_visualize():
     return render_template('index.html')
 
 
-main_server.run(port=80,debug=False)
+main_server.run(host='0.0.0.0',port=8080,debug=False)
